@@ -9,7 +9,9 @@ app.use(express.json());
 // handing new POST request in REST API
 
 app.get("/", (req, res) => {
-	res.send("Use https://ishanrestapi.herokuapp.com/mens to see the records");
+	res.send(
+		'Use <a href= "https://ishanrestapi.herokuapp.com/mens">https://ishanrestapi.herokuapp.com/mens </a> to see the records'
+	);
 });
 app.use("/", router);
 
