@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 5000;
 require("../src/database/connection");
 const MensRanking = require("../src/models/mens");
 
-app.get("/", (req, res) => {
+app.get("/mens", (req, res) => {
 	res.send("First Page");
 });
 
