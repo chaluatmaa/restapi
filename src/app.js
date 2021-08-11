@@ -8,7 +8,7 @@ app.use(express.json());
 
 // handing new POST request in REST API
 
-app.use(router);
+app.use("/", router);
 
 // app.get("/mens", async (req, res) => {
 // 	try {
