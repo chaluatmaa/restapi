@@ -8,6 +8,9 @@ app.use(express.json());
 
 // handing new POST request in REST API
 
+app.get("/", (req, res) => {
+	res.send("Use /mens to see the records");
+});
 app.use("/", router);
 
 // app.get("/mens", async (req, res) => {
