@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.get("/mens", async (req, res) => {
 	try {
-		let result = await MensRanking.find();
+		let result = await MensRanking.find().sort({ ranking: 1 });
 		console.log(result);
 		res.status(200).json({ result });
 	} catch (e) {}
