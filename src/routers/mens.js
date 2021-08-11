@@ -7,7 +7,12 @@ router.get("/mens", async (req, res) => {
 		let result = await MensRanking.find().sort({ ranking: 1 });
 		console.log(result);
 		res.status(200).json({ result });
-	} catch (e) {}
+	} catch (e) {
+		console.log(e);
+		res.status(400).json({
+			e,
+		});
+	}
 });
 
 router.get("/mens/:id", async (req, res) => {
@@ -16,7 +21,12 @@ router.get("/mens/:id", async (req, res) => {
 		let result = await MensRanking.findById({ _id: _id });
 		console.log(result);
 		res.status(200).json({ result });
-	} catch (e) {}
+	} catch (e) {
+		console.log(e);
+		res.status(400).json({
+			e,
+		});
+	}
 });
 
 router.patch("/mens/:id", async (req, res) => {
@@ -27,7 +37,12 @@ router.patch("/mens/:id", async (req, res) => {
 		});
 		console.log(result);
 		res.status(200).json({ result });
-	} catch (e) {}
+	} catch (e) {
+		console.log(e);
+		res.status(400).json({
+			e,
+		});
+	}
 });
 
 router.delete("/mens/:id", async (req, res) => {
@@ -36,7 +51,12 @@ router.delete("/mens/:id", async (req, res) => {
 		let result = await MensRanking.findByIdAndDelete({ _id: _id });
 		console.log(result);
 		res.status(200).json({ result });
-	} catch (e) {}
+	} catch (e) {
+		console.log(e);
+		res.status(400).json({
+			e,
+		});
+	}
 });
 
 router.post("/mens", async (req, res) => {
